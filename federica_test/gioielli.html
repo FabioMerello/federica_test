@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gioielli – A la Rache</title>
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+  <img src="logo.png" alt="A la Rache logo" class="logo">
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+  <nav class="nav-links" id="nav">
+    <a href="index.html#hero">Home</a>
+    <a href="index.html#about">Chi siamo</a>
+    <a href="index.html#catalogo">Catalogo</a>
+    <a href="index.html#contact">Contatti</a>
+  </nav>
+</header>
+
+<!-- Hero categoria -->
+<section class="hero hero-small">
+  <div class="hero-overlay"></div>
+  <div class="hero-content" data-aos="fade-up">
+    <h1>Gioielli in Macramé</h1>
+    <p>Collane, bracciali e anelli realizzati a mano con pietre naturali e linhasita</p>
+  </div>
+</section>
+
+<!-- Prodotti -->
+<section class="products-section" data-aos="fade-up">
+  <h2>Le nostre creazioni</h2>
+
+  <div class="products-grid" id="products-grid">
+
+    <!-- Card prodotto esempio -->
+    <div class="product-card"
+         data-price-s="15.00"
+         data-price-m="18.00"
+         data-price-l="22.00"
+         data-gift-extra="3.00">
+
+      <img src="https://i.pinimg.com/474x/6d/56/d2/6d56d222c2a8fe7a765e730c00873f59.jpg"
+           alt="Collana macramé con pietra naturale"
+           class="product-image">
+
+      <div class="product-info">
+        <h3>Collana "Luna"</h3>
+
+        <p>
+          Collana in macramé realizzata con filo cerato <strong>Linhasita</strong>
+          e pietra naturale a scelta (occhio di tigre, quarzo rosa, ametista).
+          Ogni pezzo è intrecciato a mano con cura e unicità.
+        </p>
+
+        <!-- SELETTORI -->
+        <div class="options">
+          <label>Taglia:</label>
+          <select class="option-select size-select">
+            <option value="S">S – Minimal</option>
+            <option value="M">M – Standard</option>
+            <option value="L">L – Statement</option>
+          </select>
+
+          <label>Confezione regalo:</label>
+          <select class="option-select packaging-select">
+            <option value="no">Senza confezione</option>
+            <option value="yes">Con confezione (+€3,00)</option>
+          </select>
+        </div>
+
+        <label>Pietra:</label>
+        <select class="option-select bow-select">
+          <option value="none">Nessuna preferenza</option>
+          <option value="quarzo">Quarzo rosa</option>
+          <option value="ametista">Ametista</option>
+          <option value="tigre">Occhio di tigre</option>
+        </select>
+
+        <div class="color-preview" style="margin-top:12px;">
+          <span class="color-label">Colorazione filo:</span>
+          <div class="color-circle"
+               style="background:#b5c6a8; width:22px; height:22px; border-radius:50%; display:inline-block; vertical-align:middle; margin-left:8px;">
+          </div>
+        </div>
+
+        <!-- PREZZO -->
+        <div style="margin-top:10px;">
+          <span class="price">€15,00</span>
+        </div>
+
+        <!-- DETTAGLI -->
+        <button class="show-more-btn" type="button">Dettagli tecnici</button>
+        <div class="product-full-desc">
+          <ul>
+            <li><strong>Materiali:</strong> Filo cerato Linhasita + pietra naturale</li>
+            <li><strong>Taglia S:</strong> pendente 1.5 cm</li>
+            <li><strong>Taglia M:</strong> pendente 2 cm</li>
+            <li><strong>Taglia L:</strong> pendente 2.5 cm</li>
+          </ul>
+        </div>
+
+        <!-- Form -->
+        <button class="toggle-form-btn" type="button">Richiedi Preventivo</button>
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="product-form">
+          <input type="hidden" name="access_key" value="693f3d01-1add-44f1-a79e-3ebff85f72cd">
+          <input type="hidden" name="to" value="91ritarusciano@gmail.com">
+          <input type="hidden" name="product" value="Collana Luna">
+
+          <input type="hidden" name="size_selected">
+          <input type="hidden" name="packaging_selected">
+          <input type="hidden" name="bow_selected">
+
+          <input type="text" name="name" placeholder="Il tuo nome" required>
+          <input type="tel" name="phone" placeholder="Telefono" required pattern="[0-9+ ]{6,}">
+          <textarea name="message" placeholder="Messaggio o richieste aggiuntive"></textarea>
+
+          <button type="submit" class="btn">Invia richiesta</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 A la Rache – Tutti i diritti riservati</p>
+  <p>
+    <a href="tel:+393465751046">+39 346 575 1046</a> |
+    <a href="privacy.html">Privacy Policy</a>
+  </p>
+</footer>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true });
+</script>
+</body>
+</html>
