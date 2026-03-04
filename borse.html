@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borse in Macramé – A la Rache</title>
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+  <img src="logo.png" alt="A la Rache logo" class="logo">
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+  <nav class="nav-links" id="nav">
+    <a href="index.html#hero">Home</a>
+    <a href="index.html#about">Chi siamo</a>
+    <a href="index.html#catalogo">Catalogo</a>
+    <a href="index.html#contact">Contatti</a>
+  </nav>
+</header>
+
+<!-- Hero categoria -->
+<section class="hero hero-small">
+  <div class="hero-overlay"></div>
+  <div class="hero-content" data-aos="fade-up">
+    <h1>Borse in Macramé</h1>
+    <p>Accessori intrecciati a mano, unici e senza tempo</p>
+  </div>
+</section>
+
+<!-- Prodotti -->
+<section class="products-section" data-aos="fade-up">
+  <h2>Le nostre borse</h2>
+
+  <div class="products-grid" id="products-grid">
+
+    <!-- Card prodotto esempio -->
+    <div class="product-card"
+         data-price-s="28.00"
+         data-price-m="34.00"
+         data-price-l="42.00"
+         data-gift-extra="3.00">
+
+      <img src="https://images.unsplash.com/photo-1549032305-e816fabf0dd7?q=80&w=1200&auto=format&fit=crop"
+           alt="Borsa artigianale in macramé"
+           class="product-image">
+
+      <div class="product-info">
+        <h3>Borsa “Marea”</h3>
+
+        <p>
+          Borsa in macramé intrecciata completamente a mano con cotone di alta qualità.
+          Perfetta per l’estate, per un look boho-chic, o come accessorio quotidiano unico.
+        </p>
+
+        <!-- SELETTORI -->
+        <div class="options">
+          <label>Dimensione:</label>
+          <select class="option-select size-select">
+            <option value="S">S – Mini</option>
+            <option value="M">M – Standard</option>
+            <option value="L">L – Oversize</option>
+          </select>
+
+          <label>Confezione regalo:</label>
+          <select class="option-select packaging-select">
+            <option value="no">Senza confezione</option>
+            <option value="yes">Con confezione (+€3,00)</option>
+          </select>
+        </div>
+
+        <label>Colore cotone:</label>
+        <select class="option-select bow-select">
+          <option value="naturale">Naturale</option>
+          <option value="beige">Beige</option>
+          <option value="salvia">Verde salvia</option>
+          <option value="terracotta">Terracotta</option>
+        </select>
+
+        <div class="color-preview" style="margin-top:12px;">
+          <span class="color-label">Esempio colorazione:</span>
+          <div class="color-circle"
+               style="background:#d8c3a5; width:22px; height:22px; border-radius:50%; display:inline-block; vertical-align:middle; margin-left:8px;">
+          </div>
+        </div>
+
+        <!-- PREZZO -->
+        <div style="margin-top:10px;">
+          <span class="price">€28,00</span>
+        </div>
+
+        <!-- DETTAGLI -->
+        <button class="show-more-btn" type="button">Dettagli tecnici</button>
+        <div class="product-full-desc">
+          <ul>
+            <li><strong>Materiale:</strong> 100% cotone intrecciato</li>
+            <li><strong>Mini (S):</strong> 18×15 cm</li>
+            <li><strong>Standard (M):</strong> 25×20 cm</li>
+            <li><strong>Oversize (L):</strong> 32×28 cm</li>
+          </ul>
+        </div>
+
+        <!-- Form -->
+        <button class="toggle-form-btn" type="button">Richiedi Preventivo</button>
+
+        <form action="https://api.web3forms.com/submit"
+              method="POST"
+              class="product-form">
+
+          <input type="hidden" name="access_key" value="693f3d01-1add-44f1-a79e-3ebff85f72cd">
+          <input type="hidden" name="to" value="91ritarusciano@gmail.com">
+          <input type="hidden" name="product" value="Borsa Marea">
+
+          <input type="hidden" name="size_selected">
+          <input type="hidden" name="packaging_selected">
+          <input type="hidden" name="bow_selected">
+
+          <input type="text" name="name" placeholder="Il tuo nome" required>
+          <input type="tel" name="phone" placeholder="Telefono" required pattern="[0-9+ ]{6,}">
+          <textarea name="message" placeholder="Richieste aggiuntive"></textarea>
+
+          <button type="submit" class="btn">Invia richiesta</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 A la Rache – Tutti i diritti riservati</p>
+  <p>
+    <a href="tel:+393465751046">+39 346 575 1046</a> |
+    <a href="privacy.html">Privacy Policy</a>
+  </p>
+</footer>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true });
+</script>
+
+</body>
+</html>
